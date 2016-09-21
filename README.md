@@ -98,6 +98,25 @@ let g:ycm_collect_identifiers_from_tags_files=1
 
 - [https://github.com/Valloric/YouCompleteMe/issues/2315](https://github.com/Valloric/YouCompleteMe/issues/2315)
 
+#### 6. 出现`Read time out`提示
+提示内容：
+```c
+HTTPConnectionPool(host='localhost', port=37075): Read timed out. (read timeout=0.5)
+```
+
+**解决**
+
+修改`YouCompleteMe`中的`TIMEOUT_SECONDS`变量：
+```c
+cd ~/.vim/bundle/YouCompleteMe/python/ycm/client
+vi completion_request.py
+```
+修改`TIMEOUT_SECONDS`改为2，如果改为2仍然出现问题可以改成30。
+
+ **参考链接**
+ 
+- [https://github.com/Valloric/YouCompleteMe/issues/777](https://github.com/Valloric/YouCompleteMe/issues/777)
+
 
 
 
