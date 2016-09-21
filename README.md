@@ -32,7 +32,7 @@ cd ~/.vim/bundle/YouCompleteMe
 出现编译失败的情况重新编译即可。
 
 
-#### 3. 添加对C项目的支持
+#### 3. 添加对C项目的补全
 编译时需要改为运行如下命令：
 ```c
 cd ~/.vim/bundle/YouCompleteMe
@@ -54,7 +54,7 @@ wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/maste
 
 **注：`.ycm_extra_conf.py`文件最好不要格式化**
 
-#### 4. 添加对C++项目的支持
+#### 4. 添加对C++项目的补全
 编译和安装`Command Line Tools`和对C项目的配置一样，但是`.ycm_extra_conf.py`文件有所不同。
 编译时需要改为运行如下命令：
 ```c
@@ -73,6 +73,30 @@ wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/maste
 
 **注：`.ycm_extra_conf.py`文件最好不要格式化**
 
+#### 5. 添加对Node.js项目的补全
+编译时需要改为运行如下命令：
+```c
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --tern-completer
+```
+安装时添加`--tern-complete`是添加对JavaScript的支持（注：如果YCM需要同时支持C和Node.js，使用如下命令：`./install.py --clang-completer --tern-completer`）。
+还需要在项目的跟目录添加`.tern-project`文件，可以在Node.js项目根目录运行如下命令直接下载我提供的`.tern-project`文件：
+```c
+wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/master/YouCompleteMe/js/.tern-project
+```
+此外还需要`tags`文件，使用如下命令用ctags生成tags文件：
+```c
+ctags -R app/ --javascript-kinds=+f+m+p+v --fields=+l --extra=+q
+```
+Node.js项目中目录很多，比如说模块目录`node_modules`就不需要生成tags文件，所以这里设置`app/`为指定要生成tags的目录，不设置指定目录的话，则默认对全部目录生成。
+设置`.vimrc`文件，增加对`tags`文件的读取
+```c
+let g:ycm_collect_identifiers_from_tags_files=1 
+```
+
+**参考链接**
+
+- [https://github.com/Valloric/YouCompleteMe/issues/2315](https://github.com/Valloric/YouCompleteMe/issues/2315)
 
 
 
