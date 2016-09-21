@@ -52,5 +52,28 @@ wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/maste
 
 - [https://github.com/Valloric/YouCompleteMe/issues/2339](https://github.com/Valloric/YouCompleteMe/issues/2339)
 
+**注：`.ycm_extra_conf.py`文件最好不要格式化**
+
+#### 4. 添加对C++项目的支持
+编译和安装`Command Line Tools`和对C项目的配置一样，但是`.ycm_extra_conf.py`文件有所不同。
+编译时需要改为运行如下命令：
+```c
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+```
+并且需要下载`Command Line Tools`，可以使用如下命令下载：
+```c
+xcode-select --install
+```
+如果电脑中已经安装过`Command Line Tools`，会提示已经安装。
+最后，还需要在C++项目的根目录添加`.ycm_extra_conf.py`文件，可以在C++项目根目录下运行如下命令直接下载我修改过的支持C++项目的`.ycm_extra_conf.py`文件：
+```c
+wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/master/YouCompleteMe/cpp/.ycm_extra_conf.py
+```
+
+**注：`.ycm_extra_conf.py`文件最好不要格式化**
+
+
+
 
 
