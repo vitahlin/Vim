@@ -12,11 +12,11 @@ Github：[https://github.com/Valloric/YouCompleteMe](https://github.com/Valloric
 ##### 安装过慢
 使用`BundleInstall`安装时，一直是`Processing…`, 再进入Vim提示`YouCompleteMe unavailable: No module named future`
 
-**解决：**
+*解决：*
 
 一直在`Processing……`这是因为文件过大，安装速度过慢，可以开启另外一个终端，查看`Vim`插件目录下的`YouCompleteMe`目录大小是否在缓慢增加。如果`Bundle`没有提示安装成功重新安装即可。
 
-**参考链接：**
+*参考链接*
 
 - [https://github.com/yangyangwithgnu/use_vim_as_ide/issues/45](https://github.com/yangyangwithgnu/use_vim_as_ide/issues/45)
 
@@ -48,7 +48,7 @@ xcode-select --install
 wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/master/YouCompleteMe/c/.ycm_extra_conf.py
 ```
 
-**参考链接**
+*参考链接*
 
 - [https://github.com/Valloric/YouCompleteMe/issues/2339](https://github.com/Valloric/YouCompleteMe/issues/2339)
 
@@ -94,7 +94,7 @@ Node.js项目中目录很多，比如说模块目录`node_modules`就不需要�
 let g:ycm_collect_identifiers_from_tags_files=1 
 ```
 
-**参考链接**
+*参考链接*
 
 - [https://github.com/Valloric/YouCompleteMe/issues/2315](https://github.com/Valloric/YouCompleteMe/issues/2315)
 
@@ -104,7 +104,7 @@ let g:ycm_collect_identifiers_from_tags_files=1
 HTTPConnectionPool(host='localhost', port=37075): Read timed out. (read timeout=0.5)
 ```
 
-**解决**
+*解决：*
 
 修改`YouCompleteMe`中的`TIMEOUT_SECONDS`变量：
 ```c
@@ -113,9 +113,19 @@ vi completion_request.py
 ```
 修改`TIMEOUT_SECONDS`改为2，如果改为2仍然出现问题可以改成30。
 
- **参考链接**
+*参考链接*
  
 - [https://github.com/Valloric/YouCompleteMe/issues/777](https://github.com/Valloric/YouCompleteMe/issues/777)
+
+#### 7. 不弹出Scratch窗口
+在`.vimrc`文件中增加设置：
+```c
+set completeopt-=preview
+```
+
+*参考链接*
+
+- [http://stackoverflow.com/questions/15962421/how-can-i-disable-scratch-preview-window](http://stackoverflow.com/questions/15962421/how-can-i-disable-scratch-preview-window)
 
 
 
