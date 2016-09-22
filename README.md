@@ -9,6 +9,9 @@ Github：[https://github.com/Valloric/YouCompleteMe](https://github.com/Valloric
 
 #### 1. 安装
 直接使用`Bundle`安装即可。
+```c
+Bundle 'Valloric/YouCompleteMe'
+```
 ##### 安装过慢
 使用`BundleInstall`安装时，一直是`Processing…`, 再进入Vim提示`YouCompleteMe unavailable: No module named future`
 
@@ -126,6 +129,21 @@ set completeopt-=preview
 *参考链接*
 
 - [http://stackoverflow.com/questions/15962421/how-can-i-disable-scratch-preview-window](http://stackoverflow.com/questions/15962421/how-can-i-disable-scratch-preview-window)
+
+### vim-powerline
+状态栏美化插件。
+Github：[https://github.com/Lokaltog/vim-powerline](https://github.com/Lokaltog/vim-powerline)
+#### 安装
+直接用`Bundle`安装即可。
+```c
+Bundle 'Lokaltog/vim-powerline'
+```
+#### 配置
+将以下配置加到`.vimrc`文件中。
+```c
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+```
 
 
 
