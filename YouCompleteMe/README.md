@@ -3,6 +3,30 @@
 用于代码补全和提示，非常强大，支持C、C++、JavaScript、Python、Go等等。该插件需要`Python`支持。具体可参考Github上说明。
 Github：[https://github.com/Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 
+#### 在`vimrc`中配置：
+
+```c
+" 开启语义补全
+let g:ycm_seed_identifiers_with_syntax=1
+"在注释输入中也能补全
+let g:ycm_complete_in_comments=1
+let g:ycm_collect_identifiers_from_tags_files=1
+let g:ycm_min_num_of_chars_for_completion=1
+"在字符串输入中也能补全
+let g:ycm_complete_in_strings = 1
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'nerdtree' : 1,
+      \}
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_cache_omnifunc=0
+let g:ycm_server_keep_logfiles = 1
+
+```
+
 ### 1. 安装
 直接使用`Bundle`安装即可。
 ```c
