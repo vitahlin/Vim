@@ -134,7 +134,7 @@ HTTPConnectionPool(host='localhost', port=37075): Read timed out. (read timeout=
 cd ~/.vim/bundle/YouCompleteMe/python/ycm/client
 vi completion_request.py
 ```
-修改`TIMEOUT_SECONDS`改为2，如果改为2仍然出现问题可以改成30。
+`completion_request.py`文件第34行`TIMEOUT_SECONDS`原来的值为0.5,改为2，如果改为2仍然出现问题可以改成30。改完后需要重启Vim。
 
 ###### 参考链接
  
