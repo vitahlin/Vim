@@ -26,4 +26,9 @@ Github：[https://github.com/kien/ctrlp.vim](https://github.com/kien/ctrlp.vim)
 
 Github：[https://github.com/tacahiroy/ctrlp-funky](https://github.com/tacahiroy/ctrlp-funky)
 
+### [ctrlsf](https://github.com/vitahlin/Vim/tree/master/ctrlsf)
+帮助在项目内进行全局搜索。
+
+Github：[https://github.com/dyng/ctrlsf.vim](https://github.com/dyng/ctrlsf.vim)
+
 
