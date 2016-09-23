@@ -1,6 +1,7 @@
 
 ## vim-powerline
 状态栏美化插件。
+
 Github：[https://github.com/Lokaltog/vim-powerline](https://github.com/Lokaltog/vim-powerline)
 ### 安装
 直接用`Bundle`安装即可。

@@ -1,6 +1,7 @@
 
 ## YouCompleteMe
 用于代码补全和提示，非常强大，支持C、C++、JavaScript、Python、Go等等。该插件需要`Python`支持。具体可参考Github上说明。
+
 Github：[https://github.com/Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 
 #### 在`vimrc`中配置：
