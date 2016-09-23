@@ -122,7 +122,7 @@ let g:ycm_collect_identifiers_from_tags_files=1
 - [https://github.com/Valloric/YouCompleteMe/issues/2315](https://github.com/Valloric/YouCompleteMe/issues/2315)
 
 ### 6. 出现`Read time out`提示
-提示内容：
+在进行补全提示时，有时候Vim会出现`Read time out`，具体内容：
 ```c
 HTTPConnectionPool(host='localhost', port=37075): Read timed out. (read timeout=0.5)
 ```
