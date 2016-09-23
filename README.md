@@ -14,7 +14,7 @@ Github：[https://github.com/Valloric/YouCompleteMe](https://github.com/Valloric
 状态栏美化插件。
 Github：[https://github.com/Lokaltog/vim-powerline](https://github.com/Lokaltog/vim-powerline)
 
-### [ctrlp]()
+### [ctrlp](https://github.com/vitahlin/Vim/tree/master/ctrlp)
 在项目内进行文件搜索。
 Github：[https://github.com/kien/ctrlp.vim](https://github.com/kien/ctrlp.vim)
 
