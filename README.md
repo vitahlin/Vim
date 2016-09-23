@@ -21,5 +21,9 @@ Github：[https://github.com/Lokaltog/vim-powerline](https://github.com/Lokaltog
 
 Github：[https://github.com/kien/ctrlp.vim](https://github.com/kien/ctrlp.vim)
 
+### [ctrlp-funky]()
+提供当前文件内函数搜索功能。
+
+Github：[https://github.com/tacahiroy/ctrlp-funky](https://github.com/tacahiroy/ctrlp-funky)
 
 
