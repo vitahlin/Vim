@@ -31,8 +31,9 @@ Github：[https://github.com/tacahiroy/ctrlp-funky](https://github.com/tacahiroy
 
 Github：[https://github.com/dyng/ctrlsf.vim](https://github.com/dyng/ctrlsf.vim)
 
-### [autoformat]
+### [vim-autoformat](https://github.com/vitahlin/Vim/tree/master/vim-autoformat)
 代码格式化插件。
-Github：[]()
+
+Github：[https://github.com/Chiel92/vim-autoformat](https://github.com/Chiel92/vim-autoformat)
 
 
