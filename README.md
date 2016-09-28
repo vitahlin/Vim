@@ -36,4 +36,10 @@ Github：[https://github.com/dyng/ctrlsf.vim](https://github.com/dyng/ctrlsf.vim
 
 Github：[https://github.com/Chiel92/vim-autoformat](https://github.com/Chiel92/vim-autoformat)
 
+### [rainbow_parentheses]()
+
+多重括号高亮。
+
+Github：[https://github.com/kien/rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
+
 
