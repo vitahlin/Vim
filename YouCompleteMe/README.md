@@ -28,6 +28,11 @@ let g:ycm_server_keep_logfiles = 1
 
 ```
 
+#### 常用命令
+```c
+YcmRestartServer // 重启YCM服务
+```
+
 ### 1. 安装
 直接使用`Bundle`安装即可。
 ```c
