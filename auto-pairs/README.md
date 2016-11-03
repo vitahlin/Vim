@@ -2,7 +2,7 @@
 
 Github:[https://github.com/jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs)
 
-自动补全括号插件。
+括号匹配插件。可以自动补全括号及分号、引号等。
 
 ### 安装
 

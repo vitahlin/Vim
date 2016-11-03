@@ -4,8 +4,6 @@ GitHub：[https://github.com/kien/ctrlp.vim](https://github.com/kien/ctrlp.vim)
 
 它可以快速的帮助我们找到项目中的文件。在vim normal模式下，按下ctrl+p，然后输入你要寻找的文件就行了。当然还有其他一些快捷查找键，如正则查找等。类似在atom和sublime中的`Cmd-p`查找。
 
-
-
 ### 安装
 ```c
 Plugin 'kien/ctrlp.vim'
