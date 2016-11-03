@@ -1,11 +1,23 @@
 ## rainbow_parentheses.vim
 
-用于多重括号高亮。当代码中含邮多个括号时，可以较为清晰的识别。
-
 GitHub：[https://github.com/kien/rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
 
-#### 在`.vimrc`中的设置
+用于多重括号高亮。当代码中含有多个括号时，可以较为清晰的识别。
+
+
+### 安装
+
 ```c
+Plugin 'kien/rainbow_parentheses.vim'
+```
+
+### 设置
+
+在`.vimrc`中增加设置：
+
+```c
+" rainbow_parentheses 多重括号高亮
+"-----------------------------------------
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
     \ ['Darkblue',    'SeaGreen3'],
@@ -33,10 +45,6 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-```
-
-### 安装
-```c
-Bundle 'kien/rainbow_parentheses.vim'
+"--------------------------------------------
 ```
 
