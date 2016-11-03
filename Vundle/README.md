@@ -36,7 +36,10 @@ Plugin 'Lokaltog/vim-powerline'
 保存`.vimrc`文件后重启`Vim`，输入命令`PluginInstall`即可开始安装。
 并且安装的插件都在`~/.vim/bundle`目录下。
 
-##### 安装其它插件失败
+### 可能出现问题
+
+#### 安装其它插件失败
+
 在国内，因为网络状况安装插件时可能出现失败情况。我们可以用一个取巧的方法。
 这里以安装插件`vim-powerline`为例。
 可以直接在`~/.vim/bundle`目录下clone这个项目
