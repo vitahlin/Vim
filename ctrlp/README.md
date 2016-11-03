@@ -28,7 +28,7 @@ map <leader>f :CtrlPMRU<CR>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.exe,*.jpg,*.rar,*.doc,*.png,*.jpeg,*.tar,*.xlsx,*.mk,*.Makefile,*.pdf,*.mk,*.dmg,*.bat
 set wildignore+=*/Applications/*
 set wildignore+=*/Library/*,*/Music/*,*/Pictures/*,*/Movies/*,*/Others/*,*/Doc/*
-set wildignore+=*/logs/*,*/node_modules/*,*/Applications/*,*/apt-vim/*,*/Book/*,*/zhao/*,*/Desktop/*,*/Software/*,*/Gitignore/*
+set wildignore+=*/logs/*,*/node_modules/*,*/Applications/*,*/apt-vim/*,*/Book/*,*/Desktop/*,*/Software/*,*/Gitignore/*
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn|rvm|node_modules|Library|Applications)$',
     \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc|bat|png)$',
