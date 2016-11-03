@@ -12,6 +12,8 @@ Plugin 'tacahiroy/ctrlp-funky'
 
 ### 设置
 
+在`.vimrc`中设置：
+
 ```c
 " 设置快捷键为 \fu
 nnoremap <Leader>fu :CtrlPFunky<Cr>
