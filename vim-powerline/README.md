@@ -16,9 +16,13 @@ Plugin 'Lokaltog/vim-powerline'
 
 将以下配置加到`.vimrc`文件中。
 
+
 ```c
+" vim-powerline 状态栏美化 
+"---------------------------------------
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
+"---------------------------------------
 ```
 
 ### 可能出现问题

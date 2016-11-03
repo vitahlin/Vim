@@ -16,7 +16,8 @@ Plugin 'kien/ctrlp.vim'
 在`.vimrc`中的设置
 
 ```c
-
+" ctrlp 查找项目文件
+"------------------------------------------------
 " 设置打开模式为默认模式的快捷键
 map <C-p> :CtrlPMixed<CR>
 
@@ -43,5 +44,7 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " 当项目中新建文件时，需要用这个模式，先清除插件缓存再查找，不然无法找到新文件
 nnoremap <silent> <C-t> :ClearAllCtrlPCache<CR>\|:CtrlP<CR>
+
+"-----------------------------------------------
 ```
 
