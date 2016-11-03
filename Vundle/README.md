@@ -1,12 +1,17 @@
 ## Vundle
 GitHub：[https://github.com/VundleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim)
+
 Vim中用来管理插件的插件，实现插件的快速安装、卸载等。
 
+
 ### 安装
+
 在终端执行命令
+
 ```c
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
+
 `git clone`完成后需要在`.vimrc`中增加配置：
 
 ```c
@@ -28,7 +33,9 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 ```
+
 然后在对应位置写上要安装的插件，如：
+
 ```c
 Plugin 'Lokaltog/vim-powerline'
 ```
@@ -41,8 +48,8 @@ Plugin 'Lokaltog/vim-powerline'
 #### 安装其它插件失败
 
 在国内，因为网络状况安装插件时可能出现失败情况。我们可以用一个取巧的方法。
-这里以安装插件`vim-powerline`为例。
-可以直接在`~/.vim/bundle`目录下clone这个项目
+这里以安装插件`vim-powerline`为例,可以直接在`~/.vim/bundle`目录下clone这个项目
+
 ```c
 cd ~/.vim/bundle
 git clone git@github.com:Lokaltog/vim-powerline.git
