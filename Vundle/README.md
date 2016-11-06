@@ -53,7 +53,7 @@ Plugin 'Lokaltog/vim-powerline'
 
 ```c
 cd ~/.vim/bundle
-git clone git@github.com:Lokaltog/vim-powerline.git
+git clone --recursive git@github.com:Lokaltog/vim-powerline.git
 ```
 
 `clone`完成后再在`.vimrc`文件中添加设置：
