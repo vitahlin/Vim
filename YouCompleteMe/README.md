@@ -131,7 +131,7 @@ set completeopt-=preview
 
 #### 2. `ERROR: please install CMake and retry.`
 
-运行`./install.py --clang-complete --tern-complete`时提示"`ERROR: please install CMake and retry.`"。
+运行`./install.py --clang-completer --tern-completer`时提示"`ERROR: please install CMake and retry.`"。
 
 ##### 解决
 需要安装`CMake`:
