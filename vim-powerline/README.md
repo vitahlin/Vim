@@ -27,6 +27,11 @@ set laststatus=2
 
 ### 可能出现问题
 
+
+#### 可能出现乱码
+
+需要安装`Powerline`的相关字体：[https://github.com/powerline/fonts](https://github.com/powerline/fonts)
+
 #### 在`Vim`中状态栏无法正确显示箭头
 
 这因为是缺少对应字体，需要安装如下字体：
