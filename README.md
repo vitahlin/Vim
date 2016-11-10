@@ -56,9 +56,11 @@ taglist的替代品，显示当前文件的变量、函数等。
 - #### [vim-powerline](https://github.com/vitahlin/Vim/tree/master/vim-powerline)
 状态栏美化插件。
 
+- #### [vim-rooter](https://github.com/vitahlin/Vim/tree/master/vim-rooter)
+自动切换`Vim`工作路径。
+
 - #### [vim-surround](https://github.com/vitahlin/Vim/tree/master/vim-surround)
 快速修改、删除、增加配对符号。
-
 
 - #### [vim-autoformat](https://github.com/vitahlin/Vim/tree/master/vim-autoformat)
 代码格式化插件。
