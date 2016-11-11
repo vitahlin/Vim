@@ -23,7 +23,7 @@ Plugin 'Valloric/YouCompleteMe'
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
 ```
-运行`./install.py`时可以添加在后面添加参数以添加对不同语言的支持。如：`./install.py --clang-complete --tern-complete`，同时添加对C和JavaScript的支持。
+运行`./install.py`时可以添加在后面添加参数以添加对不同语言的支持。如：`./install.py --clang-completer --tern-completer`，同时添加对`C`和`JavaScript`的支持。
 
 ### 设置
 
@@ -62,7 +62,7 @@ wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/maste
 wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/master/YouCompleteMe/cpp/.ycm_extra_conf.py
 ```
 
-**注：`.ycm_extra_conf.py`文件最好不要格式化**
+**注：`.ycm_extra_conf.py`文件不要格式化**
 
 #### 3. 添加对Node.js项目的补全
 
