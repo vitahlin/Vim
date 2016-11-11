@@ -15,7 +15,8 @@ Plugin 'flazz/vim-colorschemes'
 安装完后，需要复制主题文件到对应目录。
 
 ```c 
-cp -R ~/.vim/bundle/vim-colorschemas/colors/* ~/.vim/colors
+mkdir ~/.vim/colors
+cp -R ~/.vim/bundle/vim-colorschemes/colors/* ~/.vim/colors
 
 ```
 
