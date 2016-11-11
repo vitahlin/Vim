@@ -64,6 +64,18 @@ Plugin 'Lokaltog/vim-powerline'
 
 保存后，在Vim中执行`PluginInstall`就会提示完成了。
 
+#### 安装插件或者更新插件时出现`Error running :helptags`
+需要重装`Vundle`和插件。删除旧的`.vim`文件夹，用`mkdir`新建文件，然后再`git clone`。
+```c 
+sudo mv ~/.vim ~/OLDvim
+mkdir -p ~/.vim/bundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+这里先把旧的`.vim`文件夹命名为`OLDvim`，然后安装`Vundle`插件，就可以在`Vim`中运行`PluginInstall`。
+
+##### 参考链接
+- [https://stackoverflow.com/questions/21080391/fresh-vim-install-vim-permission-errors-vundle-not-functional/21080650#21080650](https://stackoverflow.com/questions/21080391/fresh-vim-install-vim-permission-errors-vundle-not-functional/21080650#21080650)
+
 ### `Vundle`常用命令
 
 ```c
