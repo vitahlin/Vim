@@ -10,7 +10,7 @@ Github：[https://github.com/Chiel92/vim-autoformat](https://github.com/Chiel92/
 ```c
 Plugin 'Chiel92/vim-autoformat'
 ```
-需要安装`astyle`，格式化Python代码则需要`yapf`支持。
+对`C/C++`格式化需要安装`astyle`，格式化Python代码则需要`yapf`支持。
 
 ### 设置
 
@@ -42,6 +42,19 @@ au BufWrite *.json :Autoformat
 ```c 
 npm install -g js-beautify
 ```
+
+#### 对`Python`的格式化
+安装`yapf`:
+```c
+sudo pip install yapf
+```
+
+安装完后在`.vimrc`中设置：
+```c 
+let g:formatter_yapf_style = 'pep8'
+au BufWrite *.py :Autoformat
+```
+即可在保存`Python`代码时自动格式化。
 
 
 
