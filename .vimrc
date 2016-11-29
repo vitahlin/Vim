@@ -63,8 +63,6 @@ set nobackup
 set nowb
 set noswapfile
 
-set tags+=~/Downloads/Code/SeaBattle/SeaBattleServer/tags
-
 " tab
 set tabstop=4
 set softtabstop=4
