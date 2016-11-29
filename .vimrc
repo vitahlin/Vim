@@ -1,51 +1,43 @@
-" Configuration file for vim
-
-set modelines=0		" CVE-2007-2438
-
-" Normally we use vim-extensions. If you want true vi-compatibility
-" remove change the following statements
-set nocompatible	" Use Vim defaults instead of 100% vi compatibility
-set backspace=2		" more powerful backspacing
-
-" Don't write backup file if vim is being called by "crontab -e"
-au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
-" Don't write backup file if vim is being called by "chpass"
-au BufWrite /private/etc/pw.* set nowritebackup nobackup
-
-" 配置立即生效的配置
-"autocmd BufWritePost ~/.vimrc source ~/.vimrc
-
-set shortmess=atI
-winpos 100 130
 
 " 共享剪贴板
 set clipboard+=unnamed
 
-set completeopt-=preview
+" 显示行号
+set number 
+
+" 设置字体及其大小
+set guifont=Source_Code_Pro:h15
+
+set termencoding=utf-8
+set encoding=utf-8
+set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
+
 
 set cmdheight=2
+
+" 在编辑过程中，在右下角显示光标位置的状态行
 set ruler
+
 set showcmd
-set number
-set autochdir
 set autowrite
 set autowriteall
 set autoread
 set confirm
+
+" 光标移动到buffer的顶部和底部时保持3行距离
 set scrolloff=3
+
 set wildmenu
 set history=50
+
+" 在Visual模式时，按Ctrl+c复制选择的内容
+vmap <C-c> "+y
 
 " 字符间插入的像素行数目
 set linespace=0
 
 set showmatch
 set matchtime=2
-
-" 主题颜色配置
-"set background=dark
-set guifont=Source_Code_Pro:h14
-colorscheme solarized
 
 " 语法高亮
 syntax on
@@ -59,19 +51,9 @@ autocmd InsertEnter * se cul
 set hlsearch
 set incsearch
 
-set termencoding=utf-8
-set encoding=utf-8
-set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
-
 " 智能对齐
 set smartindent
 set autoindent
-
-" tab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
 
 " bakcspace
 set backspace=eol,start,indent
@@ -81,131 +63,108 @@ set nobackup
 set nowb
 set noswapfile
 
-"filetype plugin indent on
-"filetype plugin off
+set tags+=~/Downloads/Code/SeaBattle/SeaBattleServer/tags
 
-set rtp+=~/.vim/bundle/vundle/
+" tab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+
+" 主题设置
+syntax enable
+set background=dark
+colorscheme solarized
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Bundle 'L9'
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-" 我的插件
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/nerdtree'
-"Bundle 'scrooloose/syntastic'
-Bundle 'jiangmiao/auto-pairs'
-Bundle 'scrooloose/nerdcommenter'
+" 代码补全
+Plugin 'Valloric/YouCompleteMe'
 
-Bundle 'altercation/vim-colors-solarized'
+" 自动切换工作路径
+Plugin 'airblade/vim-rooter'
 
-Bundle 'tagbar'
+" 状态栏美化
+Plugin 'Lokaltog/vim-powerline'
 
-" 更好的js语法支持
-Bundle 'pangloss/vim-javascript'
+" 文件搜素
+Plugin 'ctrlpvim/ctrlp.vim'
 
-" 更好的js语法高亮
-Bundle 'othree/yajs.vim'
+" 当前文件内函数列表显示
+Plugin 'tacahiroy/ctrlp-funky'
 
-" js各类框架 库的高亮支持
-Bundle 'othree/javascript-libraries-syntax.vim'
+" 项目内进行全局搜索
+Plugin 'dyng/ctrlsf.vim'
 
-" 自动选择括号等符号中的内容
-Bundle 'terryma/vim-expand-region'
+" 多重括号颜色区分
+Plugin 'kien/rainbow_parentheses.vim'
 
-" 显示代码行后面的空格
-Bundle 'bronson/vim-trailing-whitespace'
-
-" 自动补全
-Bundle 'Valloric/YouCompleteMe'
-
-
-"c++代码高亮
-Bundle 'octol/vim-cpp-enhanced-highlight'
-
-Bundle 'junegunn/vim-easy-align'
+" 括号自动补全
+Plugin 'jiangmiao/auto-pairs'
 
 " 多文件编辑
-Bundle 'fholgado/minibufexpl.vim'
+Plugin 'fholgado/minibufexpl.vim'
 
-" 窗口管理
-Bundle 'winmanager'
+" 主题插件，包含多种主题，安装后还需要复制对应文件到目录
+Plugin 'flazz/vim-colorschemes'
 
-" 文件搜索
-Bundle 'kien/ctrlp.vim'
+" 快速添加／删除括号
+Plugin 'tpope/vim-surround'
 
-" 文件内函数搜索
-Bundle 'tacahiroy/ctrlp-funky'
+" 显示当前文件的类、函数等
+Plugin 'Tagbar'
+
+" js高亮支持
+Plugin 'pangloss/vim-javascript'
+
+" js各类框架和库的高亮
+Plugin 'othree/javascript-libraries-syntax.vim'
 
 " 代码格式化
-Bundle 'Chiel92/vim-autoformat'
-Bundle 'maksimr/vim-jsbeautify'
+Plugin 'Chiel92/vim-autoformat'
 
-" 全局搜索
-Bundle 'dyng/ctrlsf.vim'
-
-" 多重括号颜色高亮
-Bundle 'kien/rainbow_parentheses.vim'
-
-call vundle#end()
-filetype plugin indent on
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 
-set tags+=~/Downloads/SeaBattle/SeaBattleServer/tags
-set autochdir
+" ctrlp-funky 查找函数
+"-------------------------------------------------------------------
+" 设置快捷键为 \fu
+nnoremap <Leader>fu :CtrlPFunky<Cr>
 
- 
-" powerline
-let g:Powerline_symbols = 'fancy'
-set laststatus=2
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+let g:ctrlp_funky_syntax_highlight = 1
+let g:ctrlp_extensions = ['funky']
+"-------------------------------------------------------------------
 
-" vim-cpp-enhanced-highlight
-let g:cpp_class_scope_highlight = 1
-let g:cpp_experimental_template_highlight = 1
 
-" nerdtree
-map <C-n> :NERDTreeMirror<CR>
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeWinSize=30
-let NERDTreeWinPos='left'
-let NERDTreeShowLineNumbers=1
-let NERDTreeShowHidden=0
-let neocomplcache_enable_at_startup = 1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" tagbar
-let g:tagbar_width=35
-let g:tagbar_autofocus=1
-nmap <C-m> :TagbarToggle<CR>
-
-" minibufexplilet
-"let g:miniBufExplMapWindowNavVim = 1   "按下Ctrl+h/j/k/l，可以切换到当前窗口的上下左右窗口
-"let g:miniBufExplMapWindowNavArrows = 1  "按下Ctrl+箭头，可以切换到当前窗口的上下左右窗口
-"let g:miniBufExplMapCTabSwitchBufs = 1   "启用以下两个功能：Ctrl+tab移到下一个窗口
-let g:miniBufExplModSelTarget=1  "不要在不可编辑内容的窗口（如TagList窗口）中打开选中的buffer
-
-" winmanager
-let g:winManagerWindowLayout='FileExplorer'
-let g:winManagerWidth =40
-nmap wm :WMToggle<cr>
-"定义快捷键
-nmap <silent> <F7> :WMToggle<cr>
-"let g:AutoOpenWinManager = 1 "开启Vim时自动打开
-
-" ctrip
+" ctrlp 查找项目文件
+"-----------------------------------------------------------------------------------------
+" 设置打开模式为默认模式的快捷键
 map <C-p> :CtrlPMixed<CR>
+
+" 设置打开模式为打开使用过文件的模式的快捷键
 map <leader>f :CtrlPMRU<CR>
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.exe,*.jpg,*.rar,*.doc,*.png,*.jpeg,*.tar,*.xlsx,*.mk,*.Makefile,*.pdf,*.mk,*.dmg,*.bat
-set wildignore+=*/Applications/*
+
+" 设置要忽略的文件或者目录
+set wildignore+=*.so,*.swp,*.zip,*.exe,*.jpg,*.rar,*.doc,*.docx,*.png,*.jpeg,*.tar,*.xlsx,*.mk,*.Makefile,*.pdf,*.mk,*.dmg,*.bat
+set wildignore+=*/Applications/*,*/Documents/*,*/YouCompleteMe/*,*/Nutstore/*,*/tmp/*
 set wildignore+=*/Library/*,*/Music/*,*/Pictures/*,*/Movies/*,*/Others/*,*/Doc/*
-set wildignore+=*/logs/*,*/node_modules/*,*/Applications/*,*/apt-vim/*,*/Book/*,*/zhao/*,*/Desktop/*,*/Software/*,*/Gitignore/*
+set wildignore+=*/logs/*,*/node_modules/*,*/Applications/*,*/apt-vim/*,*/Book/*,*/Desktop/*,*/Software/*,*/Gitignore/*
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn|rvm|node_modules|Library|Applications)$',
     \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc|bat|png)$',
     \ }
+
 "let g:ctrlp_working_path_mode=0
 let g:ctrlp_match_window_bottom=1
 let g:ctrlp_max_height=50
@@ -213,118 +172,24 @@ let g:ctrlp_match_window_reversed=0
 let g:ctrlp_mruf_max=300
 let g:ctrlp_follow_symlinks=1
 let g:ctrlp_working_path_mode = 'ra'
+
+" 当项目中新建文件时，需要用这个模式，先清除插件缓存再查找，不然无法找到新文件
 nnoremap <silent> <C-t> :ClearAllCtrlPCache<CR>\|:CtrlP<CR>
-
-" ctrlp-funky
-nnoremap <Leader>fu :CtrlPFunky<Cr>
-" narrow the list down with a word under cursor
-nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
-let g:ctrlp_funky_syntax_highlight = 1
-let g:ctrlp_extensions = ['funky']
-
-" ============================================================================
-" ============================================================================
-"                               自动添加作者信息设置
-" ============================================================================
-" ============================================================================
-map <F4> :call AddTitleForJS()<cr>
-function AddTitleForJS()
-	call append(0,"'use strict';")
-    call append(1,"// Copyright 2016 TianLe Inc. All Rights Reserved.")
-    call append(2,"")
-    call append(3,"/**")
-    call append(4," * @created ".strftime("%Y/%m/%d"))
-    call append(5," * @filename ".expand("%:t"))
-    call append(6," * @author linw1225@163.com(vitah)")
-    call append(7," * @fileoverview")
-    call append(8," */")
-    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
-endf
+"-----------------------------------------------------------------------------------------
 
 
-map <F6> :call AddTitleForC()<cr>
-function AddTitleForC()
-    call append(0,"/**")
-    call append(1," * @created ".strftime("%Y/%m/%d"))
-    call append(2," * @filename ".expand("%:t"))
-    call append(3," * @author linw1225@163.com(vitah)")
-    call append(4," * @fileoverview")
-    call append(5," */")
-    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
-endf
-
-" ===============================================================================
-"                             编译运行C++11程序
-" ===============================================================================
-" <F5> 编译和运行C/C++
-map <F8> :call CompileCpp()<CR>
-function CompileCpp()
-    set makeprg=g++\ -o\ %<\ %
-    silent make
-    let myfile=expand("%:r")
-    if filereadable(myfile)
-        execute "! ./%< && rm ./%<"
-	else
-        cope5
-    endif
-endfunction
-
-" ===============================================================================
-"                            代码格式化设置
-" ===============================================================================
-" 文件保存时根据文件类型自动调用对应的格式化插件
-au BufWrite *.c :Autoformat
-au BufWrite *.cpp :Autoformat
-"au BufWrite *.py :Autoformat
-au BufWrite *.js : call g:JsBeautify()
-au BufWrite *.json : call g:JsBeautify()
-
-let g:autoformat_autoindent = 1
-let g:autoformat_retab = 1
-let g:autoformat_remove_trailing_spaces = 1
-autocmd FileType vim,tex let b:autoformat_autoindent=0
-let g:formatdef_harttle = '"astyle --style=kr --pad-oper --add-brackets"'
-let g:formatters_cpp = ['harttle']
-let g:formatters_java = ['harttle']
-
-" 格式化python文件
-let g:formatter_yapf_style = 'pep8'
-
-"autocmd FileType javascript noremap :call JsBeautify()
-"autocmd FileType html noremap :call HtmlBeautify()
-"autocmd FileType css noremap :call CSSBeautify()
-
-
-" 全局搜索
-nmap <C-S><C-F> :CtrlSF 
+" ctrlsf 项目内全局搜索
+"-----------------------------------------------------
+nmap <C-S><C-F> :CtrlSF  " 设置为快捷键Ctrl+s Ctrl+f
 nmap <C-S>o :CtrlSFOpen<CR>
 nmap ss :CtrlSF <C-R><C-W><CR>
 vnoremap ss y:CtrlSF <C-R>"<CR>
 let g:ctrlsf_default_root = 'project'
+"-----------------------------------------------------
 
 
-" 开启语义补全
-let g:ycm_seed_identifiers_with_syntax=1
-"在注释输入中也能补全
-let g:ycm_complete_in_comments=1
-let g:ycm_collect_identifiers_from_tags_files=1
-let g:ycm_min_num_of_chars_for_completion=1
-"在字符串输入中也能补全
-let g:ycm_complete_in_strings = 1
-let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'nerdtree' : 1,
-      \}
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_enable_diagnostic_signs = 0
-let g:ycm_enable_diagnostic_highlighting = 0
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_cache_omnifunc=0
-
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
-
-" rainbow_parentheses
+" rainbow_parentheses 多重括号高亮
+"-----------------------------------------
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
     \ ['Darkblue',    'SeaGreen3'],
@@ -352,3 +217,97 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+"--------------------------------------------
+
+" vim-powerline 状态栏美化
+"---------------------------------------
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+"---------------------------------------
+
+" tagbar 显示当前文件的变量、函数等
+"----------------------------------------
+let g:tagbar_width=35
+let g:tagbar_autofocus=1
+
+" 在一个tag上按回车后，自动跳转到tag在文件的位置，并关闭tagbar
+let g:tagbar_autoclose=1
+nmap <C-m> :TagbarToggle<CR>
+"----------------------------------------
+
+" vim-javascript js语法高亮
+" ----------------------------------
+"  设置为注释也添加高亮
+let g:javascript_plugin_jsdoc = 1
+" ----------------------------------
+
+" javascript-libraries-syntax.vim JS各类框架和库对高亮支持
+" ---------------------------------------------------------------------
+let g:used_javascript_libs = 'underscore,handlebars,requirejs,jquery'
+" ---------------------------------------------------------------------
+
+" vim-autoformat 代码格式化
+"------------------------------------
+" 设置代码格式化快捷键
+"noremap <F3> :Autoformat<CR>
+"
+" 删除行尾空格
+let g:autoformat_remove_trailing_spaces = 1
+let g:autoformat_autoindent = 1
+let g:autoformat_retab = 1
+autocmd FileType vim,tex let b:autoformat_autoindent=0
+
+" 设置Python规范
+let g:formatter_yapf_style = 'google'
+
+set autoread
+
+au BufWrite *.c :Autoformat
+au BufWrite *.cpp :Autoformat
+au BufWrite *.h :Autoformat
+au BufWrite *.js :Autoformat
+au BufWrite *.json :Autoformat
+au BufWrite *.py :Autoformat
+"------------------------------------
+
+" YouCompleteMe 代码自动补全
+" -------------------------------------------
+" 开启语义补全
+let g:ycm_seed_identifiers_with_syntax=1
+
+
+"在注释输入中也能补全
+let g:ycm_complete_in_comments=1
+let g:ycm_collect_identifiers_from_tags_files=1
+let g:ycm_min_num_of_chars_for_completion=1
+
+"在字符串输入中也能补全
+let g:ycm_complete_in_strings = 1
+
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'nerdtree' : 1,
+      \}
+
+" 设置默认的.ycm_extra_conf.py文件
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_cache_omnifunc=0
+let g:ycm_server_keep_logfiles = 1
+
+" 不弹出Scratch窗
+set completeopt-=preview
+
+"let g:ycm_filepath_completion_use_working_dir = 1
+" -------------------------------------------
+"  
+"  
+" vim-rooter 自动切换Vim工作路径
+"--------------------------------------------
+"  识别项目路径的文件
+let g:rooter_patterns = ['tags', '.git/']
+let g:rooter_use_lcd = 1
+let g:rooter_silent_chdir = 1
+"--------------------------------------------
