@@ -4,6 +4,13 @@ GitHub：[https://github.com/dyng/ctrlsf.vim](https://github.com/dyng/ctrlsf.vim
 
 帮助在项目内进行全局搜索。
 
+### 需要 `ack` 或者 `ag` 支持
+
+`ctrlsf`插件需要 `ack` 或者 `ag` 支持才能进行搜索，macOS 上可以用 `Homwbrew` 直接安装：
+```c 
+brew install ag
+```
+
 ### 安装
 
 ```c
