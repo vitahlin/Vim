@@ -31,3 +31,7 @@ vnoremap ss y:CtrlSF <C-R>"<CR>
 let g:ctrlsf_default_root = 'project'
 "-----------------------------------------------------
 ```
+
+
+### 参考链接
+- [http://www.tuicool.com/articles/FJ32An](http://www.tuicool.com/articles/FJ32An)
