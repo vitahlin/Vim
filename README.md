@@ -65,6 +65,5 @@ taglist的替代品，显示当前文件的变量、函数等。
 - #### [vim-autoformat](https://github.com/vitahlin/Vim/tree/master/vim-autoformat)
 代码格式化插件。
 
-
-
-
+- ##### [The-NERD-tree](https://github.com/vitahlin/Vim/tree/master/The-NERD-tree)
+文件管理器。
