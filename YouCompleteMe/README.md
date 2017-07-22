@@ -25,6 +25,12 @@ cd ~/.vim/bundle/YouCompleteMe
 ```
 运行`./install.py`时可以添加在后面添加参数以添加对不同语言的支持。如：`./install.py --clang-completer --tern-completer`，同时添加对`C`和`JavaScript`的支持。
 
+用命令`./install.py --clang-completer` 在macOS上编译时，当因为网络原因，`Downloading Clang 4.0.1`时进度过慢，或者失败，不能通过`proxychains4`来帮助下载，因为`proxychains4`可能会导致下载到错误的 Clang版本，可以通过如下办法：
+到[Clang官网](http://releases.llvm.org/download.html)选择下载Pre-Built Binaries `Clang for Mac OS X`，把下载的文件拷贝到YCM插件目录`YouCompleteMe/third_party/ycmd/clang_archives`下面，然后执行如下命令，重新编译：
+```c
+./install.py --clang-completer --system-libclang
+```
+
 ### 设置
 
 
