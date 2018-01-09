@@ -56,5 +56,27 @@ au BufWrite *.py :Autoformat
 ```
 即可在保存`Python`代码时自动格式化。
 
+#### 对C的格式化
+
+安装`astyle`:
+```c
+brew install astyle
+```
+
+然后在`vimrc`文件中增加配置，这样即采用`astyle`默认的格式化规则，要查看更多对格式化规则请参看：[http://astyle.sourceforge.net/](http://astyle.sourceforge.net/):
+```c
+let g:autoformat_remove_trailing_spaces = 1
+let g:autoformat_autoindent = 1
+let g:autoformat_retab = 1
+autocmd FileType vim,tex let b:autoformat_autoindent=0
+
+set autoread
+
+# 自动格式化
+au BufWrite *.c :Autoformat
+au BufWrite *.cpp :Autoformat
+au BufWrite *.h :Autoformat
+```
+
 
 
