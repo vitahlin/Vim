@@ -181,9 +181,13 @@ vi completion_request.py
 ```
 `completion_request.py`文件第34行`TIMEOUT_SECONDS`原来的值为0.5,改为2，如果改为2仍然出现问题可以改成30。改完后需要重启Vim。
 
-#### 启动时提示`ycm_core library compiled for Python 2 but loaded in Python 3`
+#### 5. 启动时提示`ycm_core library compiled for Python 2 but loaded in Python 3`
 
-如果你使用`Homebrew`来安装`python`的话，最新的`brew install python`安装的是`python 3`。即，Homebrew默认的是 3 版本的 Python，而YCM编译需要的是 Python 2。所以，需要在`.vimrc`文件中增加设置，手动设置 Python 路径为系统自带的 Python2。
+如果你使用`Homebrew`来安装`python`的话，最新的`brew install python`安装的是`python 3`。即，Homebrew默认的是 3 版本的 Python，而YCM编译需要的是 Python 2。
+
+##### 解决
+
+所以，需要在`.vimrc`文件中增加设置，手动设置 Python 路径为系统自带的 Python2。
 ```c
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 ```
