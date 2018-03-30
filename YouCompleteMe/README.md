@@ -206,6 +206,10 @@ vi completion_request.py
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 ```
 
+**注：**
+通过较新的Python编译后，Vim中可能会出现`The ycmd server SHUT DOWN(restart with ':YcmRestartServer'). Unexpected exit code -6. Type ':YcmToggleLogs ycmd_55097_stderr_FR_v64.log' to check the logs. `，然后会弹出 `Python quit unexpectedly while using the Python plug-in.`窗口。
+这时候，需要把手动设置Python路径为系统路径的代码取消掉。采用其他方式解决上述问题。
+
 
 ##### 参考链接 
 - [https://github.com/Valloric/YouCompleteMe/issues/777](https://github.com/Valloric/YouCompleteMe/issues/777)
