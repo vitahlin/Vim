@@ -72,7 +72,21 @@ wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/maste
 
 #### 3. 添加对Node.js项目的补全
 
+`./install.py --tern-completer`
 编译时需要添加`--tern-completer`参数以添加对`javascript`的支持。
+
+> 注：如果希望同时支持C/JavaScript，那么可以在编译时直接运行：
+> ```c
+> ./install.py --tern-completer --clang-completer
+> ```
+> 或者先编译C部分再编译JavaScript部分：
+> ```c
+> ./install.py --tern-completer
+> ./install.py --clang-completer
+> ```
+> 上述两段代码效果等同。
+
+
 还需要在项目的跟目录添加`.tern-project`文件，可以在Node.js项目根目录运行如下命令直接下载我提供的`.tern-project`文件：
 ```c
 wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/master/YouCompleteMe/js/.tern-project
